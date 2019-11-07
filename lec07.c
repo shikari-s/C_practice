@@ -20,6 +20,7 @@ int main(void){
         double err;
 
         err = 1.0;
+        //while内が演習1
         while(err>eps){
                 y = cdef(x , cdev(f(x),df(x)));
                 tmp=cdef(x,y);
@@ -27,6 +28,7 @@ int main(void){
                 printf("(%f,%f), err:%f\n",x.re,x.im,err);
                 x=y;
         }
+        //ここから3行が演習2
         Complex z;
         z = f(x);
         printf("f((%f)+(%f)) = %f\n",x.re,x.im,f(x));
